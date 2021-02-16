@@ -11,5 +11,20 @@ The files which was changed:
 1. ![app/open-nsynth/src/OledScreenDriver.cpp](OledScreenDriver.cpp)
 2. ![app/open-nsynth/src/ofApp.h](ofApp.h)
 
+### Replacing the source
+
+0. sudo mount -o remount,rw /
+1. Place the OledScreenDriver.cpp and ofApp.h somewhere in Raspberry Pi 
+2. cp ofApp.h /home/pi/opt/of/apps/open-nsynth/open-nsynth/src/
+3. cp OledScreenDriver.cpp /home/pi/opt/of/apps/open-nsynth/open-nsynth/src/
+
+### Rebuilding source
+
+1. cd /home/pi/opt/of/apps/open-nsynth/open-nsynth/
+2. make clean
+3. make
+4. sudo reboot
+5. .. PROFIT! your device will start with the new compiled app 
+
 ### Original source
 The original project ![https://github.com/googlecreativelab/open-nsynth-super](https://github.com/googlecreativelab/open-nsynth-super)
